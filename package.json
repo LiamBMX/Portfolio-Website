@@ -10,11 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@astrojs/mdx": "^2.1.1",
+    "@astrojs/react": "^3.0.9",
+    "astro": "^4.3.5",
+    "date-fns": "^3.3.1",
     "framer-motion": "^11.0.8",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.344.0",
+    "marked": "^12.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-intersection-observer": "^9.8.1"
+    "react-intersection-observer": "^9.8.1",
+    "react-router-dom": "^6.22.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
