@@ -160,7 +160,7 @@ function App() {
                   Liam Adams
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-400 mb-12 leading-relaxed">
-                  Full Stack Developer & Entrepreneur designing projects 
+                  14 year old Full Stack Developer & Entrepreneur designing projects 
                   that make a difference.
                 </p>
                 <div className="flex justify-center gap-6">
