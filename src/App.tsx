@@ -29,7 +29,7 @@ function App() {
       description: 'A neurodivergence-focused task management platform that gamifies productivity for ADHD and OCD users.',
       stack: 'React, AI, Supabase',
       icon: <Brain className="w-6 h-6" />,
-      image: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       title: 'RedGen',
@@ -56,22 +56,22 @@ function App() {
 
   const blogPosts = [
     {
-      title: 'The Future of AI in Web Development',
-      date: 'March 31th, 2025',
-      excerpt: 'This is a sample article since Im too lazy to write one right now.',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995',
+      title: 'What is MindBloom, and why did you make it?',
+      date: 'April 15, 2025',
+      excerpt: 'People often ask me, "What is MindBloom, and why did you make it?", well here\'s your answer...',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
-      title: 'Building Accessible Web Applications',
+      title: 'What its like being a 14 year old business owner',
       date: 'March 31th, 2025',
-      excerpt: 'This is a sample article since Im too lazy to write one right now.',
-      image: 'https://images.unsplash.com/photo-1617040619263-41c5a9ca7521',
+      excerpt: 'Day in the life as a 14 year old startup owner and how I got started with entruprenuership.',
+      image: 'https://images.unsplash.com/photo-1661588698602-da41ee4fc846?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
-      title: 'The Psychology of User Experience',
+      title: 'The thought behind creating MindBlooms virtual garden',
       date: 'March 31th, 2025',
-      excerpt: 'This is a sample article since Im too lazy to write one right now.',
-      image: 'https://images.unsplash.com/photo-1576633587382-13ddf37b1fc1',
+      excerpt: 'How and why I created MindBlooms virtual garden, aswell as the science behind how it helps people.',
+      image: 'https://plus.unsplash.com/premium_photo-1720998704025-fac9bac7c31d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
   ];
 
