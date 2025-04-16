@@ -146,7 +146,7 @@ function App() {
           </p>
           <div className="flex justify-center gap-6">
             <a 
-              href="https://github.com" 
+              href="https://github.com/LiamBMX" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="p-2 hover:text-indigo-400 transition-colors"
@@ -154,7 +154,7 @@ function App() {
               <Github className="w-6 h-6" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/liamgadams0" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 hover:text-indigo-400 transition-colors"
