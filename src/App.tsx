@@ -324,7 +324,7 @@ function App() {
 
       {/* Footer */}
       <footer className="py-12 text-center text-sm text-gray-400">
-        <p>© 2024 Liam Adams. All rights reserved.</p>
+        <p>© 2025 Liam Adams. All rights reserved.</p>
       </footer>
     </div>
   );
