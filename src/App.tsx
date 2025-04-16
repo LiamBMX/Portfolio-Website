@@ -217,7 +217,7 @@ function App() {
             animate={skillsInView ? { opacity: 1, x: 0 } : {}}
             className="text-3xl font-bold mb-16"
           >
-            Result of my nerdiness
+            Result of being chronically online
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <motion.div
