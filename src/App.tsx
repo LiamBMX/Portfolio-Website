@@ -27,7 +27,7 @@ function App() {
     {
       title: 'MindBloom',
       description: 'A neurodivergence-focused task management platform that gamifies productivity for ADHD and OCD users.',
-      stack: 'React, Node.js, Appwrite',
+      stack: 'React, AI, Supabase',
       icon: <Brain className="w-6 h-6" />,
       image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809',
     },
@@ -45,25 +45,32 @@ function App() {
       icon: <Rocket className="w-6 h-6" />,
       image: 'https://images.unsplash.com/photo-1485163819542-13adeb5e0068',
     },
+    {
+      title: 'Scribbly.lol,',
+      description: 'Fun and playful way to quickly jolt down notes without the need of subscriptions, just open the site and write.',
+      stack: 'React, Supabase, Tailwind',
+      icon: <Rocket className="w-6 h-6" />,
+      image: 'https://images.unsplash.com/photo-1485163819542-13adeb5e0068',
+    },
   ];
 
   const blogPosts = [
     {
       title: 'The Future of AI in Web Development',
-      date: 'March 15, 2024',
-      excerpt: 'Exploring how artificial intelligence is reshaping the landscape of web development and what it means for developers.',
+      date: 'March 31th, 2025',
+      excerpt: 'This is a sample article since Im too lazy to write one right now.',
       image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995',
     },
     {
       title: 'Building Accessible Web Applications',
-      date: 'March 10, 2024',
-      excerpt: 'A comprehensive guide to creating web applications that are accessible to everyone.',
+      date: 'March 31th, 2025',
+      excerpt: 'This is a sample article since Im too lazy to write one right now.',
       image: 'https://images.unsplash.com/photo-1617040619263-41c5a9ca7521',
     },
     {
       title: 'The Psychology of User Experience',
-      date: 'March 5, 2024',
-      excerpt: 'Understanding how psychology principles can be applied to create better user experiences.',
+      date: 'March 31th, 2025',
+      excerpt: 'This is a sample article since Im too lazy to write one right now.',
       image: 'https://images.unsplash.com/photo-1576633587382-13ddf37b1fc1',
     },
   ];
