@@ -10,33 +10,27 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.1.1",
-    "@astrojs/react": "^3.0.9",
-    "astro": "^4.3.5",
-    "date-fns": "^3.3.1",
-    "framer-motion": "^11.0.8",
+    "@supabase/supabase-js": "^2.39.3",
+    "date-fns": "^2.30.0",
+    "framer-motion": "^10.16.4",
     "gray-matter": "^4.0.3",
-    "lucide-react": "^0.344.0",
-    "marked": "^12.0.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-intersection-observer": "^9.8.1",
-    "react-router-dom": "^6.22.2"
+    "lucide-react": "^0.292.0",
+    "marked": "^9.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.16.0",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "^6.18.0",
+    "vite-plugin-node-polyfills": "^0.23.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.9.1",
-    "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.18",
-    "eslint": "^9.9.1",
-    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
-    "eslint-plugin-react-refresh": "^0.4.11",
-    "globals": "^15.9.0",
-    "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.5.3",
-    "typescript-eslint": "^8.3.0",
-    "vite": "^5.4.2"
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
   }
 }

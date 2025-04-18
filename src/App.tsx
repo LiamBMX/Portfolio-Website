@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import { Sun, Moon, Github, Linkedin, Mail, Brain, Code, Rocket } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { BlogCard } from './components/BlogCard';
 import { BlogPost } from './pages/BlogPost';
 import { BlogIndex } from './pages/BlogIndex';
+import { AdminBlog } from './pages/AdminBlog';
+import { supabase } from './lib/supabase';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -81,14 +83,14 @@ function App() {
       date: '2025-03-31',
       excerpt: 'Day in the life as a 14 year old startup owner and how I got started with entrepreneurship.',
       image: 'https://images.unsplash.com/photo-1661588698602-da41ee4fc846',
-      slug: '14-year-old-business-owner'
+      slug: 'what-is-mindbloom'
     },
     {
       title: 'The thought behind creating MindBlooms virtual garden',
       date: '2025-03-31',
       excerpt: 'How and why I created MindBlooms virtual garden, as well as the science behind how it helps people.',
       image: 'https://plus.unsplash.com/premium_photo-1720998704025-fac9bac7c31d',
-      slug: 'mindbloom-virtual-garden'
+      slug: 'what-is-mindbloom'
     }
   ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
 
@@ -97,6 +99,7 @@ function App() {
       <Routes>
         <Route path="/blog" element={<BlogIndex />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/admin/blog" element={<AdminBlog />} />
         <Route path="/" element={
           <div className={`min-h-screen ${isDarkMode ? 'bg-[#0a0a0a] text-white' : 'bg-white text-gray-900'} relative`}>
             {/* Animated Background */}
@@ -160,7 +163,7 @@ function App() {
                   Liam Adams
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-400 mb-12 leading-relaxed">
-                  14 year old Full Stack Developer & Entrepreneur designing projects 
+                  Full Stack Developer & Entrepreneur designing projects 
                   that make a difference.
                 </p>
                 <div className="flex justify-center gap-6">

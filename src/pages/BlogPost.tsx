@@ -1,36 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 import { ArrowLeft } from 'lucide-react';
-import matter from 'gray-matter';
-import { marked } from 'marked';
-
-interface BlogPost {
-  title: string;
-  date: string;
-  content: string;
-  image: string;
-}
+import ReactMarkdown from 'react-markdown';
+import { supabase, Blog } from '../lib/supabase';
 
 export function BlogPost() {
   const { slug } = useParams();
-  const [post, setPost] = useState<BlogPost | null>(null);
+  const [post, setPost] = useState<Blog | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadPost() {
       try {
-        const response = await fetch(`/src/content/blog/${slug}.mdx`);
-        const text = await response.text();
-        const { data, content } = matter(text);
-        
-        setPost({
-          title: data.title,
-          date: data.date,
-          image: data.image,
-          content: marked(content)
-        });
+        const { data, error } = await supabase
+          .from('blogs')
+          .select('*')
+          .eq('slug', slug)
+          .single();
+
+        if (error) throw error;
+        if (data) setPost(data);
       } catch (error) {
         console.error('Failed to load blog post:', error);
       } finally {
@@ -52,14 +43,13 @@ export function BlogPost() {
   if (!post) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p>It appears my code has broken and the post "{slug}" couldnt be found, please try again later.</p>
+        <p>Post not found</p>
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white relative">
-      {/* Background Pattern */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-purple-500/5 to-pink-500/5" />
         <div className="absolute inset-0" style={{
@@ -89,13 +79,12 @@ export function BlogPost() {
 
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{post.title}</h1>
         <time className="text-gray-400 mb-8 block">
-          {format(new Date(post.date), 'MMMM d, yyyy')}
+          {format(parseISO(post.published_at), 'MMMM d, yyyy')}
         </time>
 
-        <div 
-          className="prose prose-invert max-w-none"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        <div className="prose prose-invert max-w-none">
+          <ReactMarkdown>{post.content}</ReactMarkdown>
+        </div>
       </motion.article>
     </div>
   );
