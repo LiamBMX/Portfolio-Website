@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { BlogCard } from '../components/BlogCard';
 import { useInView } from 'react-intersection-observer';
 import { supabase, Blog } from '../lib/supabase';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 export function BlogIndex() {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
@@ -54,11 +56,18 @@ export function BlogIndex() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
+          <Link
+            to="/"
+            className="inline-flex items-center text-gray-400 hover:text-white transition-colors mb-8"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to home
+          </Link>
           <h1 className="text-4xl md:text-5xl font-bold mb-16">Blog Posts</h1>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <BlogCard 
+              <BlogCard
                 key={post.id}
                 title={post.title}
                 date={post.published_at}
