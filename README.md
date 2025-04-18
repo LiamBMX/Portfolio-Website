@@ -16,6 +16,14 @@ Feel free to:
 - Open PRs or suggest improvements
 - Laugh at my rushed code (but nicely)
 
+### ⁉️ How to use
+Its pretty simple to setup but for blogs to work you do need supabase connected.
+First in your supabase dashboard setup "blogs" table with the following collums: id, title, slug, content, excerpt, image, published_at, created_at, updated_at.
+So create a .env and fillout this info from your supabase dashboard:
+```
+VITE_SUPABASE_ANON_KEY=
+VITE_SUPABASE_URL=
+```
 ---
 
 ### ☕ Like what you see?
