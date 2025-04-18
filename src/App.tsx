@@ -83,14 +83,14 @@ function App() {
       date: '2025-03-31',
       excerpt: 'Day in the life as a 14 year old startup owner and how I got started with entrepreneurship.',
       image: 'https://images.unsplash.com/photo-1661588698602-da41ee4fc846',
-      slug: 'what-is-mindbloom'
+      slug: '14-year-old-ceo'
     },
     {
       title: 'The thought behind creating MindBlooms virtual garden',
       date: '2025-03-31',
       excerpt: 'How and why I created MindBlooms virtual garden, as well as the science behind how it helps people.',
       image: 'https://plus.unsplash.com/premium_photo-1720998704025-fac9bac7c31d',
-      slug: 'what-is-mindbloom'
+      slug: 'mindblooms-virtual-garden'
     }
   ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
 
